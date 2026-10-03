@@ -1,0 +1,319 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsastudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|solutionrelative:elsastudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsastudio\\branding\\clientbrandingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|solutionrelative:elsastudio\\branding\\clientbrandingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\approval\\approvalawareworkflowdefinitionpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\approval\\approvalawareworkflowdefinitionpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsastudio\\approvals\\iworkflowapprovalsapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|solutionrelative:elsastudio\\approvals\\iworkflowapprovalsapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsastudio\\approvals\\approvalsmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|solutionrelative:elsastudio\\approvals\\approvalsmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\approval\\approvalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\approval\\approvalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\approval\\approvalmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\approval\\approvalmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\approval\\approvalendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\approval\\approvalendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\elsaserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\elsaserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60FD1CC5-A5E3-4AA7-8BEF-128465FE638E}|solution{60FD1CC5-A5E3-4AA7-8BEF-128465FE638E}|D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{60FD1CC5-A5E3-4AA7-8BEF-128465FE638E}|solution{60FD1CC5-A5E3-4AA7-8BEF-128465FE638E}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsaserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E11F2A0-8AC7-4058-82C9-C60C60A34484}|ElsaServer\\ElsaServer.csproj|solutionrelative:elsaserver\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsastudio\\wwwroot\\sample-data\\weather.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|solutionrelative:elsastudio\\wwwroot\\sample-data\\weather.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|d:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\elsastudio\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA24672-EF65-4A39-A3CB-7075486D2B65}|ElsaStudio\\ElsaStudio.csproj|solutionrelative:elsastudio\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientBrandingProvider.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Branding\\ClientBrandingProvider.cs",
+              "RelativeDocumentMoniker": "ElsaStudio\\Branding\\ClientBrandingProvider.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Branding\\ClientBrandingProvider.cs",
+              "RelativeToolTip": "ElsaStudio\\Branding\\ClientBrandingProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T20:06:58.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApprovalModels.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalModels.cs",
+              "RelativeDocumentMoniker": "ElsaServer\\Approval\\ApprovalModels.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalModels.cs",
+              "RelativeToolTip": "ElsaServer\\Approval\\ApprovalModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T19:15:05.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApprovalEndpoints.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalEndpoints.cs",
+              "RelativeDocumentMoniker": "ElsaServer\\Approval\\ApprovalEndpoints.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalEndpoints.cs",
+              "RelativeToolTip": "ElsaServer\\Approval\\ApprovalEndpoints.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T19:14:52.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Program.cs",
+              "RelativeDocumentMoniker": "ElsaStudio\\Program.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Program.cs",
+              "RelativeToolTip": "ElsaStudio\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T17:31:06.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ElsaServer\\appsettings.Development.json",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\appsettings.Development.json",
+              "RelativeToolTip": "ElsaServer\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-03T17:30:39.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\appsettings.json",
+              "RelativeDocumentMoniker": "ElsaServer\\appsettings.json",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\appsettings.json",
+              "RelativeToolTip": "ElsaServer\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-03T17:30:26.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApprovalService.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalService.cs",
+              "RelativeDocumentMoniker": "ElsaServer\\Approval\\ApprovalService.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalService.cs",
+              "RelativeToolTip": "ElsaServer\\Approval\\ApprovalService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAwwC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T19:15:06.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApprovalsModule.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Approvals\\ApprovalsModule.cs",
+              "RelativeDocumentMoniker": "ElsaStudio\\Approvals\\ApprovalsModule.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Approvals\\ApprovalsModule.cs",
+              "RelativeToolTip": "ElsaStudio\\Approvals\\ApprovalsModule.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T19:15:39.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApprovalAwareWorkflowDefinitionPublisher.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalAwareWorkflowDefinitionPublisher.cs",
+              "RelativeDocumentMoniker": "ElsaServer\\Approval\\ApprovalAwareWorkflowDefinitionPublisher.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Approval\\ApprovalAwareWorkflowDefinitionPublisher.cs",
+              "RelativeToolTip": "ElsaServer\\Approval\\ApprovalAwareWorkflowDefinitionPublisher.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAArwFUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T19:14:35.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IWorkflowApprovalsApi.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Approvals\\IWorkflowApprovalsApi.cs",
+              "RelativeDocumentMoniker": "ElsaStudio\\Approvals\\IWorkflowApprovalsApi.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\Approvals\\IWorkflowApprovalsApi.cs",
+              "RelativeToolTip": "ElsaStudio\\Approvals\\IWorkflowApprovalsApi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T19:16:14.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ElsaServer\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ElsaServer\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-03T17:43:07.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Program.cs",
+              "RelativeDocumentMoniker": "ElsaServer\\Program.cs",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Program.cs",
+              "RelativeToolTip": "ElsaServer\\Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T17:33:19.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ElsaServer.csproj",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\ElsaServer.csproj",
+              "RelativeDocumentMoniker": "ElsaServer\\ElsaServer.csproj",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\ElsaServer.csproj",
+              "RelativeToolTip": "ElsaServer\\ElsaServer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-03T17:27:49.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\MainLayout.razor",
+              "RelativeDocumentMoniker": "ElsaStudio\\MainLayout.razor",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\MainLayout.razor",
+              "RelativeToolTip": "ElsaStudio\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T17:50:44.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "weather.json",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\wwwroot\\sample-data\\weather.json",
+              "RelativeDocumentMoniker": "ElsaStudio\\wwwroot\\sample-data\\weather.json",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaStudio\\wwwroot\\sample-data\\weather.json",
+              "RelativeToolTip": "ElsaStudio\\wwwroot\\sample-data\\weather.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-03T17:51:06.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-10-03T17:51:36.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Host.cshtml",
+              "DocumentMoniker": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Pages\\_Host.cshtml",
+              "RelativeDocumentMoniker": "ElsaServer\\Pages\\_Host.cshtml",
+              "ToolTip": "D:\\my-repo\\elsa-guides\\src\\installation\\elsa-server-and-studio\\ElsaServer\\Pages\\_Host.cshtml",
+              "RelativeToolTip": "ElsaServer\\Pages\\_Host.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-03T17:51:48.365Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

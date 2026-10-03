@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ElsaServer\\ElsaServer.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ElsaStudio\\ElsaStudio.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

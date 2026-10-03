@@ -1,0 +1,84 @@
+@page "/"
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IConfiguration Configuration
+@{
+    var baseUrl = $"{Request.Scheme}://{Request.Host}";
+    var apiUrl = baseUrl + Url.Content("~/elsa/api");
+    var basePath = "";
+    var branding = Configuration.GetSection("Branding");
+    string Brand(string key, string fallback) => string.IsNullOrWhiteSpace(branding[key]) ? fallback : branding[key]!;
+    var brandingJson = System.Text.Json.JsonSerializer.Serialize(branding.GetChildren().ToDictionary(x => x.Key, x => (object?)(bool.TryParse(x.Value, out var flag) ? flag : x.Value)));
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>@Brand("AppName", "Elsa Studio")</title>
+    <base href="/"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="@Brand("AppleTouchIconUrl", $"{basePath}/_content/Elsa.Studio.Shell/apple-touch-icon.png")">
+    <link rel="icon" type="image/png" sizes="32x32" href="@Brand("Favicon32Url", $"{basePath}/_content/Elsa.Studio.Shell/favicon-32x32.png")">
+    <link rel="icon" type="image/png" sizes="16x16" href="@Brand("Favicon16Url", $"{basePath}/_content/Elsa.Studio.Shell/favicon-16x16.png")">
+    <link rel="manifest" href="@basePath/_content/Elsa.Studio.Shell/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@100&display=swap" rel="stylesheet">
+    <link href="@basePath/_content/MudBlazor/MudBlazor.min.css" rel="stylesheet"/>
+    <link href="@basePath/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.css" rel="stylesheet"/>
+    <link href="@basePath/_content/Radzen.Blazor/css/material-base.css" rel="stylesheet">
+    <link href="@basePath/_content/Elsa.Studio.Shell/css/shell.css" rel="stylesheet">
+    <link href="ElsaStudio.styles.css" rel="stylesheet">
+    <style>
+        /* Client brand colors (appsettings "Branding"): login page (Radzen) and the top app bar.
+           !important is needed because Elsa's shell.css sets the Radzen primary colors with !important. */
+        :root {
+            --brand-primary: @Brand("PrimaryColor", "#0C4DA2");
+            --brand-secondary: @Brand("SecondaryColor", "#1469DA");
+            --rz-primary: var(--brand-primary) !important;
+            --rz-primary-light: var(--brand-secondary) !important;
+            --rz-primary-lighter: color-mix(in srgb, var(--brand-primary) 12%, transparent) !important;
+            --rz-primary-dark: color-mix(in srgb, var(--brand-primary) 80%, black) !important;
+            --rz-primary-darker: color-mix(in srgb, var(--brand-primary) 65%, black) !important;
+            --rz-info: var(--brand-primary) !important; /* login page side panel */
+        }
+        .rz-background-color-info img { background: #fff; border-radius: 8px; padding: 4px; box-sizing: content-box; } /* login page logo on the brand panel */
+        .studio-appbar { background: var(--brand-primary); border-bottom-color: transparent; color: #fff; }
+        .studio-appbar :is(.mud-icon-button, .mud-button-root) { color: #fff !important; }
+        .studio-appbar :is(.mud-icon-button, .mud-button-root):hover { background: rgba(255, 255, 255, .14) !important; border-color: transparent !important; }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div class="loading-splash mud-container mud-container-maxwidth-false">
+        <h5 class="mud-typography mud-typography-h5 mud-primary-text my-6">Loading...</h5>
+    </div>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+<script src="@basePath/_content/BlazorMonaco/jsInterop.js"></script>
+<script src="@basePath/_content/BlazorMonaco/lib/monaco-editor/min/vs/loader.js"></script>
+<script src="@basePath/_content/BlazorMonaco/lib/monaco-editor/min/vs/editor/editor.main.js"></script>
+<script src="@basePath/_content/MudBlazor/MudBlazor.min.js"></script>
+<script src="@basePath/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.js"></script>
+<script src="@basePath/_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+<script>
+    window.getClientConfig = function() { return {
+        "apiUrl": "@apiUrl",
+        "basePath": "@basePath",
+        "branding": @Html.Raw(brandingJson)
+     } };
+</script>
+<script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>

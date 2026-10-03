@@ -1,0 +1,4 @@
+wwwroot\img\brand\dhaka-bank-icon.webp
+wwwroot\img\brand\dhaka-bank-logo.png
+wwwroot\img\brand\favicon.ico
+D:\my-repo\elsa-guides\src\installation\elsa-server-and-studio\ElsaServer\wwwroot\img\brand\favicon.ico

@@ -1,0 +1,179 @@
+@page "/approvals"
+@using System.Text.Json
+@using Elsa.Studio.Contracts
+@using Elsa.Studio.Security.Services
+@using MudBlazor
+@using Refit
+@inject IBackendApiClientProvider ApiClientProvider
+@inject IIdentityPermissionService PermissionService
+@inject ISnackbar Snackbar
+
+<PageTitle>Approvals</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.False" Class="py-4">
+    <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-4">
+        <MudText Typo="Typo.h5">Workflow approvals</MudText>
+        <MudSpacer/>
+        <MudIconButton Icon="@Icons.Material.Outlined.Refresh" aria-label="Refresh" OnClick="LoadAsync"/>
+    </MudStack>
+
+    <MudChipSet T="string" @bind-SelectedValue="_status" SelectionMode="SelectionMode.SingleSelection" CheckMark="true" Class="mb-4">
+        @foreach (var status in ApprovalStatus.All)
+        {
+            <MudChip Value="@status" Text="@($"{status} ({_items.Count(x => x.Status == status)})")" Color="@GetColor(status)" Variant="Variant.Outlined"/>
+        }
+    </MudChipSet>
+
+    <MudTable Items="@FilteredItems" Loading="@_loading" Hover="true" Dense="true" Elevation="0" Outlined="true">
+        <HeaderContent>
+            <MudTh>Workflow</MudTh>
+            <MudTh>Version</MudTh>
+            <MudTh>Status</MudTh>
+            <MudTh>Submitted by</MudTh>
+            <MudTh>Decided by</MudTh>
+            <MudTh>Comment</MudTh>
+            <MudTh Style="text-align: right">Actions</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Workflow">
+                <MudLink Href="@($"workflows/definitions/{context.DefinitionId}/edit")">@(context.Name ?? context.DefinitionId)</MudLink>
+            </MudTd>
+            <MudTd DataLabel="Version">@context.Version</MudTd>
+            <MudTd DataLabel="Status"><MudChip T="string" Size="Size.Small" Color="@GetColor(context.Status)">@context.Status</MudChip></MudTd>
+            <MudTd DataLabel="Submitted by">@context.SubmittedBy @FormatDate(context.SubmittedAt)</MudTd>
+            <MudTd DataLabel="Decided by">@context.DecidedBy @FormatDate(context.DecidedAt)</MudTd>
+            <MudTd DataLabel="Comment">@context.Comment</MudTd>
+            <MudTd DataLabel="Actions" Style="text-align: right">
+                @if (Has(ApprovalPermissions.Submit) && context.Status is ApprovalStatus.Draft or ApprovalStatus.Rejected)
+                {
+                    <MudButton Size="Size.Small" Variant="Variant.Filled" Color="Color.Primary" Disabled="@_busy"
+                               OnClick="@(() => RunAsync(context, "Submitted for approval", (api, id) => api.SubmitAsync(id, new ApprovalRequest())))">Submit</MudButton>
+                }
+                @if (Has(ApprovalPermissions.Approve) && context.Status == ApprovalStatus.Submitted)
+                {
+                    <MudStack Row="true" Justify="Justify.FlexEnd" AlignItems="AlignItems.Center">
+                        <MudTextField T="string" @bind-Value="_comments[context.DefinitionId]" Placeholder="Comment (optional)" Variant="Variant.Outlined" Margin="Margin.Dense" Style="min-width: 200px"/>
+                        <MudButton Size="Size.Small" Variant="Variant.Filled" Color="Color.Success" Disabled="@_busy"
+                                   OnClick="@(() => RunAsync(context, "Approved", (api, id) => api.ApproveAsync(id, new ApprovalRequest(GetComment(id)))))">Approve</MudButton>
+                        <MudButton Size="Size.Small" Variant="Variant.Outlined" Color="Color.Error" Disabled="@_busy"
+                                   OnClick="@(() => RunAsync(context, "Rejected", (api, id) => api.RejectAsync(id, new ApprovalRequest(GetComment(id)))))">Reject</MudButton>
+                    </MudStack>
+                }
+                @if (Has(ApprovalPermissions.Publish) && context.Status == ApprovalStatus.Approved)
+                {
+                    <MudButton Size="Size.Small" Variant="Variant.Filled" Color="Color.Secondary" Disabled="@_busy"
+                               OnClick="@(() => RunAsync(context, "Published", (api, id) => api.PublishAsync(id, new ApprovalRequest())))">Publish</MudButton>
+                }
+            </MudTd>
+        </RowTemplate>
+        <NoRecordsContent>
+            <MudText Typo="Typo.body2" Class="pa-4">No workflows are '@_status'.</MudText>
+        </NoRecordsContent>
+    </MudTable>
+</MudContainer>
+
+@code {
+    private List<ApprovalItem> _items = new();
+    private IReadOnlySet<string> _permissions = new HashSet<string>();
+    private readonly Dictionary<string, string?> _comments = new();
+    private string? _status = ApprovalStatus.Submitted;
+    private bool _loading;
+    private bool _busy;
+
+    private IEnumerable<ApprovalItem> FilteredItems => _items.Where(x => x.Status == _status);
+
+    protected override async Task OnInitializedAsync()
+    {
+        _permissions = await PermissionService.ListAsync();
+        _status = Has(ApprovalPermissions.Approve) ? ApprovalStatus.Submitted
+            : Has(ApprovalPermissions.Publish) ? ApprovalStatus.Approved
+            : ApprovalStatus.Draft;
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
+        _loading = true;
+
+        try
+        {
+            var api = await ApiClientProvider.GetApiAsync<IWorkflowApprovalsApi>();
+            _items = (await api.ListAsync()).Items.ToList();
+
+            foreach (var item in _items)
+                _comments.TryAdd(item.DefinitionId, null);
+        }
+        catch (Exception e)
+        {
+            Snackbar.Add(GetErrorMessage(e), Severity.Error);
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task RunAsync(ApprovalItem item, string successMessage, Func<IWorkflowApprovalsApi, string, Task> action)
+    {
+        _busy = true;
+
+        try
+        {
+            var api = await ApiClientProvider.GetApiAsync<IWorkflowApprovalsApi>();
+            await action(api, item.DefinitionId);
+            _comments[item.DefinitionId] = null;
+            Snackbar.Add($"{item.Name ?? item.DefinitionId}: {successMessage}.", Severity.Success);
+            await LoadAsync();
+        }
+        catch (Exception e)
+        {
+            Snackbar.Add(GetErrorMessage(e), Severity.Error);
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+
+    private bool Has(string permission) => _permissions.Contains(ApprovalPermissions.All) || _permissions.Contains(permission);
+
+    private string? GetComment(string definitionId) => _comments.GetValueOrDefault(definitionId);
+
+    private static string FormatDate(DateTimeOffset? date) => date == null ? "" : $"({date.Value.ToLocalTime():g})";
+
+    private static Color GetColor(string status) => status switch
+    {
+        ApprovalStatus.Submitted => Color.Info,
+        ApprovalStatus.Approved => Color.Success,
+        ApprovalStatus.Rejected => Color.Error,
+        ApprovalStatus.Published => Color.Secondary,
+        _ => Color.Default
+    };
+
+    /// <summary>
+    /// Extracts the server's validation message (e.g. "Workflow must be approved before publishing.") from an API error.
+    /// </summary>
+    private static string GetErrorMessage(Exception e)
+    {
+        if (e is not ApiException { Content: { Length: > 0 } content } apiException)
+            return e.Message;
+
+        try
+        {
+            using var document = JsonDocument.Parse(content);
+
+            if (document.RootElement.TryGetProperty("errors", out var errors) && errors.ValueKind == JsonValueKind.Object)
+            {
+                var messages = errors.EnumerateObject().SelectMany(x => x.Value.ValueKind == JsonValueKind.Array ? x.Value.EnumerateArray().Select(m => m.ToString()) : []).ToList();
+
+                if (messages.Count > 0)
+                    return string.Join(" ", messages);
+            }
+        }
+        catch (JsonException)
+        {
+        }
+
+        return $"{(int)apiException.StatusCode} {apiException.ReasonPhrase}";
+    }
+}

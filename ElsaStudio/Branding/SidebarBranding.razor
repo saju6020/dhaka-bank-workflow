@@ -1,0 +1,14 @@
+@using MudBlazor
+
+@* Sidebar header: the client's wide logo on a white panel (readable in light and dark mode) with the product name below. *@
+<MudStack Spacing="1">
+    <div style="background: #fff; border-radius: 6px; padding: 6px 10px; display: inline-flex; width: fit-content;">
+        <img src="@LogoUrl" alt="@AppName" style="height: 30px; width: auto; display: block;"/>
+    </div>
+    <MudText Typo="Typo.subtitle2" Style="opacity: .85;">@AppName</MudText>
+</MudStack>
+
+@code {
+    [Parameter] public string LogoUrl { get; set; } = default!;
+    [Parameter] public string AppName { get; set; } = default!;
+}

@@ -1,0 +1,26 @@
+# Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Tests
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+
+# Secrets — NEVER commit. NuGet.Config uses %BRAC_NUGET_*% env placeholders.
+*.pfx
+appsettings.*.local.json
+.env
+
+# Local dev config — carries the database password (SRS NFR-SEC-7)
+appsettings.Development.json
